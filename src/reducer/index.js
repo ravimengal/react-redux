@@ -1,4 +1,4 @@
-import {changeTheNumber} from './incdec';
+import changeTheNumber from './incdec';
 import {combineReducers} from 'redux'
 
 const rootReducer = combineReducers({

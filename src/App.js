@@ -1,21 +1,20 @@
 import React from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { incNumber, decNumber } from "./action/index";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
+  const mystate = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
   return (
     <div className="container card mt-5">
       <h2>Simple Redux for increment and decrement </h2>
-      <button type="button" className="btn btn-success mt-4 mb-4">
-        increment
-      </button>
+      <button onClick={() => dispatch(incNumber)}>increment</button>
 
-      <div className="input-group  ">
-        <span className="input"></span>
-        <input type="text" />
-      </div>
+      <h1>{mystate}</h1>
 
-      <button type="button" className="btn btn-danger mt-4">
-        decrement
-      </button>
+      <button onClick={() => dispatch(decNumber)}>decrement</button>
     </div>
   );
 }
