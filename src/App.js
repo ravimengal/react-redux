@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="container card mt-5">
       <h2>Simple Redux for increment and decrement </h2>
-      <button onClick={() => dispatch(incNumber)}>increment</button>
+      <button onClick={() => dispatch(incNumber())}>increment</button>
 
       <h1>{mystate}</h1>
 
-      <button onClick={() => dispatch(decNumber)}>decrement</button>
+      <button onClick={() => dispatch(decNumber())}>decrement</button>
     </div>
   );
 }
